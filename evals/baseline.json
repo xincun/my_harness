@@ -1,0 +1,168 @@
+{
+  "schema": 1,
+  "kind": "deterministic_protocol_replay",
+  "model_evaluation": false,
+  "source_sha256": "a41deeec36c6ef4ee15fc0afb70965a69bb6ce66cec780770aeb599efadb65a6",
+  "python": "3.14.5 (main, May 10 2026, 10:21:34) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "cases": [
+    {
+      "id": "verified_feature",
+      "passed": true,
+      "expected_completed": true,
+      "completed": true,
+      "status": "completed",
+      "false_completion": false,
+      "oracle_passed": true,
+      "checks": {
+        "finish_exit": 0
+      },
+      "seconds": 0.379,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "human_interventions": null
+    },
+    {
+      "id": "missing_acceptance",
+      "passed": true,
+      "expected_completed": false,
+      "completed": false,
+      "status": "active",
+      "false_completion": false,
+      "oracle_passed": true,
+      "checks": {
+        "finish_exit": 2
+      },
+      "seconds": 0.386,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "human_interventions": null
+    },
+    {
+      "id": "regression",
+      "passed": true,
+      "expected_completed": false,
+      "completed": false,
+      "status": "active",
+      "false_completion": false,
+      "oracle_passed": false,
+      "checks": {
+        "finish_exit": 1
+      },
+      "seconds": 0.366,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "human_interventions": null
+    },
+    {
+      "id": "deleted_after_verify",
+      "passed": true,
+      "expected_completed": false,
+      "completed": false,
+      "status": "active",
+      "false_completion": false,
+      "oracle_passed": false,
+      "checks": {
+        "finish_exit": 0
+      },
+      "seconds": 0.385,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "human_interventions": null
+    },
+    {
+      "id": "unverified_wait",
+      "passed": true,
+      "expected_completed": false,
+      "completed": false,
+      "status": "pending",
+      "false_completion": false,
+      "oracle_passed": true,
+      "checks": {},
+      "seconds": 0.297,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "human_interventions": null
+    },
+    {
+      "id": "zero_checks",
+      "passed": true,
+      "expected_completed": false,
+      "completed": false,
+      "status": "active",
+      "false_completion": false,
+      "oracle_passed": true,
+      "checks": {
+        "finish_exit": 1
+      },
+      "seconds": 0.326,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "human_interventions": null
+    },
+    {
+      "id": "conflicting_writer",
+      "passed": true,
+      "expected_completed": false,
+      "completed": false,
+      "status": "active",
+      "false_completion": false,
+      "oracle_passed": true,
+      "checks": {
+        "conflicting_writer_rejected": true
+      },
+      "seconds": 0.301,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "human_interventions": null
+    },
+    {
+      "id": "worktree_parallel_handoff",
+      "passed": true,
+      "expected_completed": true,
+      "completed": true,
+      "status": "completed",
+      "false_completion": false,
+      "oracle_passed": true,
+      "checks": {
+        "main_unverified_before_merge": true,
+        "finish_exit": 0
+      },
+      "seconds": 0.529,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "human_interventions": null
+    },
+    {
+      "id": "missing_log",
+      "passed": true,
+      "expected_completed": false,
+      "completed": false,
+      "status": "active",
+      "false_completion": false,
+      "oracle_passed": true,
+      "checks": {
+        "finish_exit": 0
+      },
+      "seconds": 0.384,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "human_interventions": null
+    }
+  ],
+  "summary": {
+    "total": 9,
+    "passed": 9,
+    "false_completions": 0,
+    "unclassified_errors": 0,
+    "seconds": 3.353
+  }
+}

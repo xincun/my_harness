@@ -1,0 +1,30 @@
+{
+  "harness": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "python3 ../.harness/scripts/hooks/session_start.py",
+        "timeout": 45
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "edit_file|write_file|multi_edit_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ../.harness/scripts/hooks/guard.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "python3 ../.harness/scripts/hooks/stop_gate.py",
+        "timeout": 20
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+[
+  {"id": "verified_feature", "prompt": "新增 shipping_fee：订单金额达到 9900 分免邮，否则收 800 分；保留既有订单行为。", "expected_completed": true},
+  {"id": "missing_acceptance", "prompt": "同上，但第二项验收尚未关联证据，禁止完成。", "expected_completed": false},
+  {"id": "regression", "prompt": "免邮阈值错误，独立行为检查失败，禁止完成。", "expected_completed": false},
+  {"id": "deleted_after_verify", "prompt": "验证后删除定价模块，旧凭据必须失效。", "expected_completed": false},
+  {"id": "unverified_wait", "prompt": "实现后等待用户输入，允许结束本轮但任务未完成。", "expected_completed": false},
+  {"id": "zero_checks", "prompt": "全部步骤 optional，默认未执行检查，禁止完成。", "expected_completed": false},
+  {"id": "conflicting_writer", "prompt": "同一工作树已有未完成任务时拒绝无 --new 覆盖立项，保留原未完成状态。", "expected_completed": false},
+  {"id": "worktree_parallel_handoff", "prompt": "通过独立 git worktree 并行开发并合并回主分支，统一运行 finish 完成验收。", "expected_completed": true},
+  {"id": "missing_log", "prompt": "完整验证后丢失命令日志，不得继续声称证据有效。", "expected_completed": false}
+]

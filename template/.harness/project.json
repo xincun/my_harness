@@ -1,0 +1,21 @@
+{
+  "name": "",
+  "verify": [],
+  "gates": {
+    "verify": true,
+    "learn": true
+  },
+  "evolve_every_n_tasks": 10,
+  "agents_md_max_lines": 200,
+  "stale_after_days": 120,
+  "code_globs_ignore": [
+    "docs/**",
+    "*.md",
+    ".harness/**",
+    ".claude/**",
+    ".codex/**",
+    ".agents/**"
+  ],
+  "slow_step_seconds": 300,
+  "gate_history": []
+}

@@ -1,0 +1,38 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import pathlib,runpy; p=pathlib.Path.cwd().resolve(); r=next((x for x in [p,*p.parents] if (x/'.harness').is_dir()),None); r and runpy.run_path(str(r/'.harness/scripts/hooks/session_start.py'),run_name='__main__')\"",
+            "timeout": 45
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit|apply_patch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import pathlib,runpy; p=pathlib.Path.cwd().resolve(); r=next((x for x in [p,*p.parents] if (x/'.harness').is_dir()),None); r and runpy.run_path(str(r/'.harness/scripts/hooks/guard.py'),run_name='__main__')\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import pathlib,runpy; p=pathlib.Path.cwd().resolve(); r=next((x for x in [p,*p.parents] if (x/'.harness').is_dir()),None); r and runpy.run_path(str(r/'.harness/scripts/hooks/stop_gate.py'),run_name='__main__')\"",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}
